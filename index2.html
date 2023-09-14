@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        function validarDados(){
+            if (document.getElementById('edtNome').value == "") {
+                alert("O campo nome esta vazio!");
+            }
+            if (document.getElementById('edtEndereco').value == "") {
+                alert("O campo endereço esta vazio!");
+            }
+            if (document.getElementById('edtBairro').value == "") {
+                alert("O campo bairro esta vazio!");
+            }
+            if (document.getElementById('edtCep').value == "") {
+                alert("O campo cep esta vazio!");
+            }
+            if (document.getElementById('edtCidade').value == "") {
+                alert("O campo cidade esta vazio!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="cadastrar" id="cadastrar" method="POST" action="">
+        Nome: <input type="text" name="nome" id="edtNome"><br><br>
+        Endereço: <input type="text" name="endereco" id="edtEndereco"><br><br>
+        Bairro: <input type="text" name="bairro" id="edtBairro"><br><br>
+        Cep: <input type="text" name="cep" id="edtCep"><br><br>
+        Cidade: <input type="text" name="cidade" id="edtCidade"><br><br>
+        Estado: <select class="form-select" aria-label="edtEstado">
+                    <option selected>Selecione o seu estado</option>
+                    <option value="1">Sp</option>
+                    <option value="2">Rj</option>
+                    <option value="3">Mg</option>
+                    <option value="4">Df</option>
+                    <option value="5">Ac</option>
+                    <option value="6">Mt</option>
+                </select><br><br>
+        Telefone: <input type="text" name="telefone" id="telefone"><br><br>
+        <button value="Cadastrar" name="Cadastrar" id="Cadastrar" onclick="validarDados()">Cadastrar</button><br><br>
+    </form>
+</body>
+</html>
